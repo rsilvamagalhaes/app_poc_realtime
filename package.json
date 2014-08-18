@@ -1,12 +1,15 @@
 {
   "name": "app_poc_real_time",
+  "description": "Aplicação em tempo real",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app.js"
   },
   "dependencies": {
     "express": "~4.2.0",
+    "express-load": "1.1.8",
+    "ejs": "0.8.5",
     "static-favicon": "~1.0.0",
     "morgan": "~1.0.0",
     "cookie-parser": "~1.0.1",
