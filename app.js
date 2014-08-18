@@ -1,5 +1,5 @@
-var express = require('express')
-    , load = require('express-load');
+var express = require('express'),
+    load = require('express-load');
 var app = express();
 
 app.set('views', __dirname + '/views');
@@ -12,6 +12,6 @@ load('models')
     .then('routes')
     .into(app);
 
-app.listen(3000, function(){
+app.listen(3000, function () {
     console.log("Projeto no ar!");
 });
