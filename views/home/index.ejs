@@ -1,28 +1,14 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Projeto - Agenda de contatos</title>
-</head>
-
+<% include ./header %>
 <body>
     <header>
         <h1>Projeto</h1>
         <h4>Bem-vindo!</h4>
     </header>
     <section>
-        <form action="/entrar" method="post">
-            <input type="text" name="nome" placeholder="Seu nome">
-            <br>
-            <input type="text" name="email" placeholder="Seu e-mail">
-            <br>
-            <button type="submit">Entrar</button>
-        </form>
+        <% include ./form %>
     </section>
-    <footer>
-        <small>Projeto - Agenda de contatos</small>
-    </footer>
+<% include ./footer %>
 </body>
-
 </html>
