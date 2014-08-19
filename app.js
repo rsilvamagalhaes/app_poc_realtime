@@ -1,3 +1,8 @@
+
+//VERIFICAR POSSIBILDIADE DE COLOCAR VERSAO 4, TEM UM  PROBLEMA PQ A FORMA Q TRABLAHA COM SESSION NA 3 É DIFERENTE DA 4
+
+
+
 var express = require('express'),
     load = require('express-load');
 var app = express();
