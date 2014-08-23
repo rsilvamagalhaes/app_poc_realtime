@@ -4,11 +4,12 @@
 <body>
     <header>
         <h1>Projeto</h1>
-        <h4>Bem-vindo!</h4>
     </header>
     <section>
+        <h4>Bem-vindo! <%- usuario.nome %></h4>
         <% include ./form %>
     </section>
+<% include ./exit %>    
 <% include ./footer %>
 </body>
 </html>
