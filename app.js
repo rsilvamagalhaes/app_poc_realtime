@@ -8,6 +8,8 @@ app.use(express.cookieParser('app_poc_real_time'));
 app.use(express.session());
 app.use(express.json());
 app.use(express.urlencoded());
+app.use(express.methodOverride());
+app.use(app.router)
 app.use(express.static(__dirname + '/public'));
 
 load('models')

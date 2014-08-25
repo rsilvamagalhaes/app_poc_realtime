@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html>
-<% include ./header %>
-<body>
+<% include ../header %>
     <header>
         <h1>Projeto</h1>
+        <h4>Bem-vindo!</h4>
     </header>
     <section>
-        <h4>Bem-vindo! <%- usuario.nome %></h4>
-        <% include ./form %>
+        <form action="/entrar" method="post">
+            <input type="text" name="usuario[nome]" placeholder="Digite o nome">
+            <br>
+            <input type="text" name="usuario[email]" placeholder="Digite o e-mail">
+            <br>
+            <button type="submit">Entrar</button>
+        </form>
     </section>
-<% include ./exit %>    
-<% include ./footer %>
-</body>
-</html>
+<% include ../footer %>
