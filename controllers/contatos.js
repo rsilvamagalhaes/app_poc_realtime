@@ -14,7 +14,7 @@ module.exports = function (app) {
             usuario.contatos.push(contato);
             res.redirect('/contatos');
         },
-        show: function(req, rest) {
+        show: function(req, res) {
             var id = req.params.id
             , contato = req.session.usuario.contatos[id]
             , params = {contato: contato, id: id};
