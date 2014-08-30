@@ -1,5 +1,6 @@
 var express = require('express'),
-    load = require('express-load');
+    load = require('express-load'),
+    error = require('./middleware/error');
 var app = express();
 
 app.set('views', __dirname + '/views');
@@ -11,6 +12,16 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router)
 app.use(express.static(__dirname + '/public'));
+
+app.use(function(req, res, next) {
+    res.status(404);
+    res.render('not-found');
+});
+
+app.use(function(req, res, next) {
+    res.status(500);
+    res.render('server-error', error);
+});
 
 load('models')
     .then('controllers')
