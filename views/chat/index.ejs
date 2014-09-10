@@ -1,11 +1,12 @@
 <% include ../header %>
-    <script src="/socket.io/socket.io.js"></script>
+    <script src="../../node_modules/socket.io/lib/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"/>
     <script>
         var socket = io.connect('http://localhost:3000');
         socket.on('send-client', function (msg) {
             document.getElementById('chat').innerHTML += msg;
         });
-        var enviar = function () {
+        var enviar = function() {
             var nome = document.getElementById('nome').value;
             var msg = document.getElementById('msg').value;
             socket.emit('send-server', {
