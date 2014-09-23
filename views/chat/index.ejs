@@ -1,6 +1,6 @@
 <% include ../header %>
-    <script src="../../node_modules/socket.io/lib/socket.io.js"></script>
-    <script src="http://code.jquery.com/jquery-2.1.0.min.js"/>
+    <script src="../../node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script>
         var socket = io.connect('http://localhost:3000');
         socket.on('send-client', function (msg) {
@@ -16,7 +16,7 @@
         };
     </script>
     <header>
-        <h2>Ntalk - Chat</h2>
+        <h2>Projeto - Chat</h2>
     </header>
     <section>
         <pre id="chat"></pre>

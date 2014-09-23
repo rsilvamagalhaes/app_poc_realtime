@@ -1,10 +1,11 @@
-module.exports = function(app) {
+module.exports = function (app) {
     var ChatController = {
-        index: function(req, res) {
-            var resultado = {email: req.params.email,
-                             usuario: req.session.usuario};
-            res.render('chat/index', resultado);
+        index: function (req, res) {
+            var params = {email: req.params.email,
+                         usuario: req.session.usuario};
+            res.render('chat/index', params);
         }
+
     };
     return ChatController;
 };
